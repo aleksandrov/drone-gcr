@@ -1,7 +1,8 @@
+
 .PHONY: all clean deps fmt vet test docker
 
 EXECUTABLE ?= drone-gcr
-IMAGE ?= plugins/$(EXECUTABLE)
+IMAGE ?= aleksandrovd/drone-gcr
 COMMIT ?= $(shell git rev-parse --short HEAD)
 
 LDFLAGS = -X "main.buildCommit=$(COMMIT)"
